@@ -32,7 +32,7 @@ async function startApolloServer() {
   server.applyMiddleware({ app, path: '/graphql' });
 
   // Sirve la aplicación de React desde la carpeta "saludofront-app"
-   const reactAppPath = path.join(__dirname, 'saludofront-app', 'dist');
+   const reactAppPath = path.join(__dirname, '../saludofront-app', 'dist');
     app.use(express.static(reactAppPath));
     app.get('*', (req, res) => {
     res.sendFile(path.join(reactAppPath, 'index.html'));
