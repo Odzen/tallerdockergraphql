@@ -15,4 +15,4 @@ COPY . .
 COPY --from=react-builder /app/dist ./saludofront-app/dist
 EXPOSE 4000
 
-CMD ["node", "index.js"]
+CMD ["node", "backend/index.js"]
